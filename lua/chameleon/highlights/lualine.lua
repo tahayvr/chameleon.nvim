@@ -7,7 +7,7 @@ return function(P)
     return {
       a = { fg = P.bg1, bg = accent, gui = "bold" },
       b = { fg = P.fg1, bg = P.bg2 },
-      c = { fg = P.uic1, bg = P.bg0 },
+      c = { fg = P.uic1, bg = P.bg1 },
     }
   end
 
