@@ -34,7 +34,7 @@ local function get_symlink_target()
 end
 
 local function load_palette(theme_path)
-  local path = join(theme_path, "colors.lua")
+  local path = join(theme_path, "neovim.lua")
   local ok, mod = pcall(dofile, path)
   if not ok then
     return nil, ("Error loading %s: %s"):format(path, tostring(mod))

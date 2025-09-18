@@ -4,7 +4,7 @@ Live system theme switching for Neovim using a symlink + SIGUSR1, with modular h
 
 ## Palette schema
 
-Each theme’s colors.lua must either:
+Each theme’s neovim.lua must either:
 
 - return a table with `palette = { ... }`, or
 - return the palette table directly.
@@ -62,6 +62,8 @@ pkill -SIGUSR1 nvim
 ```
 
 ## Neovim setup
+
+Add to your nvim config `~/.config/nvim/lua/plugins.lua`:
 
 ```lua
 return {

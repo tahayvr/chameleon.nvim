@@ -1,7 +1,7 @@
 return function(p)
   local vim = rawget(_G, "vim"); if not vim then return end
 
-  -- Treesitter highlight groups using all 6 syntax colors
+  -- Treesitter highlight groups
   vim.api.nvim_set_hl(0, "@comment", { fg = p.comment, italic = true })
   vim.api.nvim_set_hl(0, "@comment.error", { fg = p.color1, italic = true })
   vim.api.nvim_set_hl(0, "@comment.warning", { fg = p.color2, italic = true })
