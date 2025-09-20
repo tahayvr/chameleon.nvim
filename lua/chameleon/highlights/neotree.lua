@@ -3,11 +3,11 @@ return function(P)
   local p = P
 
   -- Main neotree window
-  vim.api.nvim_set_hl(0, "NeoTreeNormal", { fg = p.fg1, bg = p.bg1 })
-  vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { fg = p.fg2, bg = p.bg1 })
-  vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { fg = p.bg1, bg = p.bg1 })
-  vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { fg = p.bg2, bg = p.bg1 })
-  vim.api.nvim_set_hl(0, "NeoTreeVertSplit", { fg = p.bg2, bg = p.bg1 })
+  vim.api.nvim_set_hl(0, "NeoTreeNormal", { fg = p.fg1, bg = "none" })
+  vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { fg = p.fg2, bg = "none" })
+  vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { fg = "none", bg = "none" })
+  vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { fg = p.bg2, bg = "none" })
+  vim.api.nvim_set_hl(0, "NeoTreeVertSplit", { fg = p.bg2, bg = "none" })
 
   -- Title and tabs
   vim.api.nvim_set_hl(0, "NeoTreeTabInactive", { fg = p.fg3, bg = p.bg2 })

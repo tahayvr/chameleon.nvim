@@ -7,8 +7,8 @@ return function(P)
   end
 
   -- Core UI
-  set("Normal",        { fg = P.fg1, bg = P.bg1 })
-  set("NormalNC",      { fg = P.fg2, bg = P.bg1 })
+  set("Normal",        { fg = P.fg1, bg = "none" })
+  set("NormalNC",      { fg = P.fg2, bg = "none" })
   set("CursorLine",    { bg = P.bg2 })
   set("CursorLineSign", { bg = P.bg2 })
   set("StatusLine",    { fg = P.fg1, bg = P.bg2 })
