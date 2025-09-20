@@ -132,4 +132,207 @@ return function(p)
   vim.api.nvim_set_hl(0, "@function.builtin.javascript", { fg = p.fg2, bold = true })
   vim.api.nvim_set_hl(0, "@variable.builtin.javascript", { fg = p.color1, italic = true })
 
+  -- Additional core
+  vim.api.nvim_set_hl(0, "@number.float", { fg = p.color3 })
+  vim.api.nvim_set_hl(0, "@symbol", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@string.special.url", { fg = p.color4, underline = true })
+  vim.api.nvim_set_hl(0, "@string.special.path", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@string.special.symbol", { fg = p.color5, italic = true })
+
+  -- Parameters and generics
+  vim.api.nvim_set_hl(0, "@parameter", { fg = p.color5, italic = true })
+  vim.api.nvim_set_hl(0, "@type.parameter", { fg = p.color4, italic = true })
+
+  -- Storage classes / modifiers / annotations
+  vim.api.nvim_set_hl(0, "@storageclass", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@modifier", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@annotation", { fg = p.color3 })
+
+  -- Enums
+  vim.api.nvim_set_hl(0, "@type.enum", { fg = p.color4, bold = true })
+  vim.api.nvim_set_hl(0, "@type.enumMember", { fg = p.color3 })
+
+  -- Methods
+  vim.api.nvim_set_hl(0, "@function.method", { fg = p.color6 })
+  vim.api.nvim_set_hl(0, "@function.method.call", { fg = p.color6 })
+
+  -- Older TS highlight group compatibility (links)
+  vim.api.nvim_set_hl(0, "TSString", { link = "@string" })
+  vim.api.nvim_set_hl(0, "TSNumber", { link = "@number" })
+  vim.api.nvim_set_hl(0, "TSFloat", { link = "@number.float" })
+  vim.api.nvim_set_hl(0, "TSBoolean", { link = "@boolean" })
+  vim.api.nvim_set_hl(0, "TSConstant", { link = "@constant" })
+  vim.api.nvim_set_hl(0, "TSConstBuiltin", { link = "@constant.builtin" })
+  vim.api.nvim_set_hl(0, "TSConstMacro", { link = "@constant.macro" })
+  vim.api.nvim_set_hl(0, "TSFunction", { link = "@function" })
+  vim.api.nvim_set_hl(0, "TSFuncBuiltin", { link = "@function.builtin" })
+  vim.api.nvim_set_hl(0, "TSMethod", { link = "@method" })
+  vim.api.nvim_set_hl(0, "TSProperty", { link = "@property" })
+  vim.api.nvim_set_hl(0, "TSField", { link = "@field" })
+  vim.api.nvim_set_hl(0, "TSParameter", { link = "@variable.parameter" })
+  vim.api.nvim_set_hl(0, "TSVariable", { link = "@variable" })
+  vim.api.nvim_set_hl(0, "TSVariableBuiltin", { link = "@variable.builtin" })
+  vim.api.nvim_set_hl(0, "TSKeyword", { link = "@keyword" })
+  vim.api.nvim_set_hl(0, "TSKeywordFunction", { link = "@keyword.function" })
+  vim.api.nvim_set_hl(0, "TSKeywordOperator", { link = "@keyword.operator" })
+  vim.api.nvim_set_hl(0, "TSRepeat", { link = "@keyword.repeat" })
+  vim.api.nvim_set_hl(0, "TSConditional", { link = "@keyword.conditional" })
+  vim.api.nvim_set_hl(0, "TSException", { link = "@keyword.exception" })
+  vim.api.nvim_set_hl(0, "TSInclude", { link = "@include" })
+  vim.api.nvim_set_hl(0, "TSNamespace", { link = "@namespace" })
+  vim.api.nvim_set_hl(0, "TSType", { link = "@type" })
+  vim.api.nvim_set_hl(0, "TSTypeBuiltin", { link = "@type.builtin" })
+  vim.api.nvim_set_hl(0, "TSConstructor", { link = "@constructor" })
+  vim.api.nvim_set_hl(0, "TSOperator", { link = "@operator" })
+  vim.api.nvim_set_hl(0, "TSPunctDelimiter", { link = "@punctuation.delimiter" })
+  vim.api.nvim_set_hl(0, "TSPunctBracket", { link = "@punctuation.bracket" })
+  vim.api.nvim_set_hl(0, "TSPunctSpecial", { link = "@punctuation.special" })
+
+  -- Language-specific captures
+  -- Rust
+  vim.api.nvim_set_hl(0, "@function.macro.rust", { fg = p.color2, bold = true })
+  vim.api.nvim_set_hl(0, "@attribute.rust", { fg = p.color3 })
+  vim.api.nvim_set_hl(0, "@lifetime.rust", { fg = p.color5, italic = true })
+  vim.api.nvim_set_hl(0, "@type.builtin.rust", { fg = p.color4, bold = true })
+  vim.api.nvim_set_hl(0, "@variable.builtin.rust", { fg = p.color1, italic = true })
+  vim.api.nvim_set_hl(0, "@constant.builtin.rust", { fg = p.color3, bold = true })
+
+  -- Ruby
+  vim.api.nvim_set_hl(0, "@string.special.symbol.ruby", { fg = p.color5, italic = true })
+  vim.api.nvim_set_hl(0, "@variable.builtin.ruby", { fg = p.color1, italic = true })
+  vim.api.nvim_set_hl(0, "@constant.builtin.ruby", { fg = p.color3, bold = true })
+  vim.api.nvim_set_hl(0, "@method.call.ruby", { fg = p.color6 })
+
+  -- Go
+  vim.api.nvim_set_hl(0, "@function.builtin.go", { fg = p.color6, bold = true })
+  vim.api.nvim_set_hl(0, "@type.builtin.go", { fg = p.color4, bold = true })
+  vim.api.nvim_set_hl(0, "@variable.builtin.go", { fg = p.color1, italic = true })
+  vim.api.nvim_set_hl(0, "@constant.builtin.go", { fg = p.color3, bold = true })
+
+  -- SQL
+  vim.api.nvim_set_hl(0, "@constant.builtin.sql", { fg = p.color3, bold = true })
+  vim.api.nvim_set_hl(0, "@type.builtin.sql", { fg = p.color4, bold = true })
+
+  -- JSX / TSX
+  vim.api.nvim_set_hl(0, "@tag.jsx", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@tag.attribute.jsx", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@tag.delimiter.jsx", { fg = p.uic1 })
+  vim.api.nvim_set_hl(0, "@punctuation.bracket.jsx", { fg = p.fg1 })
+  vim.api.nvim_set_hl(0, "@tag.tsx", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@tag.attribute.tsx", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@tag.delimiter.tsx", { fg = p.uic1 })
+  vim.api.nvim_set_hl(0, "@punctuation.bracket.tsx", { fg = p.fg1 })
+
+  -- C++
+  vim.api.nvim_set_hl(0, "@namespace.cpp", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@type.builtin.cpp", { fg = p.color4, bold = true })
+  vim.api.nvim_set_hl(0, "@operator.cpp", { fg = p.color2 })
+
+  -- svelte
+  vim.api.nvim_set_hl(0, "@tag.svelte", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@tag.attribute.svelte", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@tag.delimiter.svelte", { fg = p.uic1 })
+  vim.api.nvim_set_hl(0, "@punctuation.bracket.svelte", { fg = p.fg1 })
+  vim.api.nvim_set_hl(0, "@keyword.svelte", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@keyword.modifier.svelte", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@keyword.conditional.svelte", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@keyword.repeat.svelte", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@keyword.coroutine.svelte", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@keyword.exception.svelte", { fg = p.color1 })
+  vim.api.nvim_set_hl(0, "@keyword.debug.svelte", { fg = p.color6 })
+  vim.api.nvim_set_hl(0, "@string.special.url.svelte", { fg = p.color4, underline = true })
+  vim.api.nvim_set_hl(0, "@string.special.path.svelte", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@punctuation.bracket.svelte", { fg = p.fg1 })
+  vim.api.nvim_set_hl(0, "@tag.delimiter.svelte", { fg = p.uic1 })
+
+  -- HTML/XML and component frameworks
+  vim.api.nvim_set_hl(0, "@tag.html", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@tag.attribute.html", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@tag.delimiter.html", { fg = p.uic1 })
+  vim.api.nvim_set_hl(0, "@punctuation.bracket.html", { fg = p.fg1 })
+  vim.api.nvim_set_hl(0, "@tag.xml", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@tag.attribute.xml", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@tag.delimiter.xml", { fg = p.uic1 })
+  vim.api.nvim_set_hl(0, "@punctuation.bracket.xml", { fg = p.fg1 })
+  vim.api.nvim_set_hl(0, "@tag.vue", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@tag.attribute.vue", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@tag.delimiter.vue", { fg = p.uic1 })
+  vim.api.nvim_set_hl(0, "@punctuation.bracket.vue", { fg = p.fg1 })
+  vim.api.nvim_set_hl(0, "@directive.vue", { fg = p.color3 })
+  vim.api.nvim_set_hl(0, "@tag.astro", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@tag.attribute.astro", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@tag.delimiter.astro", { fg = p.uic1 })
+  vim.api.nvim_set_hl(0, "@punctuation.bracket.astro", { fg = p.fg1 })
+
+  -- CSS family
+  vim.api.nvim_set_hl(0, "@property.css", { fg = p.color4 })
+  vim.api.nvim_set_hl(0, "@function.builtin.css", { fg = p.color6, bold = true })
+  vim.api.nvim_set_hl(0, "@number.css", { fg = p.color3 })
+  vim.api.nvim_set_hl(0, "@number.float.css", { fg = p.color3 })
+  vim.api.nvim_set_hl(0, "@string.special.url.css", { fg = p.color4, underline = true })
+  vim.api.nvim_set_hl(0, "@property.scss", { fg = p.color4 })
+  vim.api.nvim_set_hl(0, "@property.less", { fg = p.color4 })
+  vim.api.nvim_set_hl(0, "@property.sass", { fg = p.color4 })
+
+  -- Data languages
+  vim.api.nvim_set_hl(0, "@property.json", { fg = p.color4 })
+  vim.api.nvim_set_hl(0, "@property.yaml", { fg = p.color4 })
+  vim.api.nvim_set_hl(0, "@field.yaml", { fg = p.color4 })
+  vim.api.nvim_set_hl(0, "@property.toml", { fg = p.color4 })
+
+  -- Java
+  vim.api.nvim_set_hl(0, "@type.builtin.java", { fg = p.color4, bold = true })
+  vim.api.nvim_set_hl(0, "@keyword.import.java", { fg = p.color2 })
+  vim.api.nvim_set_hl(0, "@annotation.java", { fg = p.color3 })
+  vim.api.nvim_set_hl(0, "@constructor.java", { fg = p.color4 })
+
+  -- C
+  vim.api.nvim_set_hl(0, "@type.builtin.c", { fg = p.color4, bold = true })
+  vim.api.nvim_set_hl(0, "@macro.c", { fg = p.color2 })
+
+  -- C#
+  vim.api.nvim_set_hl(0, "@type.builtin.cs", { fg = p.color4, bold = true })
+  vim.api.nvim_set_hl(0, "@namespace.cs", { fg = p.color5 })
+  vim.api.nvim_set_hl(0, "@attribute.cs", { fg = p.color3 })
+
+  -- PHP
+  vim.api.nvim_set_hl(0, "@variable.builtin.php", { fg = p.color1, italic = true })
+  vim.api.nvim_set_hl(0, "@function.builtin.php", { fg = p.color6, bold = true })
+
+  -- Kotlin
+  vim.api.nvim_set_hl(0, "@type.builtin.kotlin", { fg = p.color4, bold = true })
+  vim.api.nvim_set_hl(0, "@annotation.kotlin", { fg = p.color3 })
+
+  -- Swift
+  vim.api.nvim_set_hl(0, "@type.builtin.swift", { fg = p.color4, bold = true })
+  vim.api.nvim_set_hl(0, "@attribute.swift", { fg = p.color3 })
+
+  -- Shell / Bash
+  vim.api.nvim_set_hl(0, "@variable.builtin.bash", { fg = p.color1, italic = true })
+  vim.api.nvim_set_hl(0, "@function.builtin.bash", { fg = p.color6, bold = true })
+  vim.api.nvim_set_hl(0, "@keyword.bash", { fg = p.color2 })
+
+  -- LSP Semantic Token compatibility (Neovim 0.9+/0.10)
+  local function link(group, target)
+    vim.api.nvim_set_hl(0, group, { link = target })
+  end
+  link("@lsp.type.class", "@type")
+  link("@lsp.type.struct", "@type")
+  link("@lsp.type.enum", "@type.enum")
+  link("@lsp.type.enumMember", "@type.enumMember")
+  link("@lsp.type.interface", "@type")
+  link("@lsp.type.typeParameter", "@type.parameter")
+  link("@lsp.type.parameter", "@variable.parameter")
+  link("@lsp.type.property", "@property")
+  link("@lsp.type.variable", "@variable")
+  link("@lsp.type.function", "@function")
+  link("@lsp.type.method", "@method")
+  link("@lsp.type.namespace", "@namespace")
+  link("@lsp.type.keyword", "@keyword")
+  link("@lsp.type.operator", "@operator")
+  link("@lsp.type.modifier", "@modifier")
+  link("@lsp.type.comment", "@comment")
+  link("@lsp.type.string", "@string")
+  link("@lsp.type.number", "@number")
+  link("@lsp.type.boolean", "@boolean")
 end
